@@ -1,0 +1,16 @@
+.Navbar{
+    background-color: #FB2201;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Navbar-Items{
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-size: xx-large;
+  }
+  img {
+    height: 100px;
+  }
