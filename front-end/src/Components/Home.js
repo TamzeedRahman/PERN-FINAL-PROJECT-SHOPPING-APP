@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Display from './Display'
-import './Home.css'
 export default class Home extends Component {
     constructor(){
         super()
@@ -19,6 +18,7 @@ export default class Home extends Component {
             input: event.target.value,
         })
     }
+
     getProduct = async (keyWord)  =>{
         //apiKey is AIzaSyA2hz8e-TNG95kuho8zXFIOQGeOcs3VsL4
         const productData = await axios.get(`https://powerful-everglades-92762.herokuapp.com/`)
