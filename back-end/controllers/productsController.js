@@ -54,7 +54,7 @@ products.get("/", async (req, res) => {
 });
 
 // SHOW
-Products.get("/:id", async (req, res) => {
+products.get("/:id", async (req, res) => {
   const { id } = req.params; 
   try {
     const Product = await getProduct(id);
@@ -70,7 +70,7 @@ Products.get("/:id", async (req, res) => {
 });
 
 // CREATE
-Products.post("/", validateProduct, async (req, res, next) => {
+products.post("/", validateProduct, async (req, res, next) => {
   try {
     const Product = await createProduct(req.body);
     if (Product["id"]) {
@@ -85,7 +85,7 @@ Products.post("/", validateProduct, async (req, res, next) => {
 });
 
 // UPDATE
-Products.put("/:id", validateProduct, async (req, res, next) => {
+products.put("/:id", validateProduct, async (req, res, next) => {
   const { id } = req.params;
   try {
     const Product = await updateProduct(id, req.body);
@@ -101,7 +101,7 @@ Products.put("/:id", validateProduct, async (req, res, next) => {
 });
 
 // DELETE
-Products.delete("/:id", async (req, res, next) => {
+products.delete("/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
     const deleted = await deleteProduct(id);
@@ -118,6 +118,6 @@ Products.delete("/:id", async (req, res, next) => {
 
 
 // ERROR HANDLING
-Products.use(customErrorHandler);
+products.use(customErrorHandler);
 
-module.exports = Products;
+module.exports = products;
