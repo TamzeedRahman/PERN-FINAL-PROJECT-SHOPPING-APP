@@ -1,5 +1,3 @@
-\c products_dev;
-
 
 INSERT INTO products (
     name, url, price, detail
