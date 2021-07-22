@@ -2,7 +2,6 @@ import './App.css';
 import {Switch, Link, Route} from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './Components/Home'
-import About from './Components/About'
 import Comment from './Components/Comment'
 export default class App extends Component {
   constructor(){
@@ -20,16 +19,14 @@ export default class App extends Component {
           <Link to='/' className="Navbar-Items">
             <img src="https://imgur.com/pLt38gU" alt="Logo"/>
           </Link>
-          
-          <Link to='/about' className="Navbar-Items">
-            About
-          </Link>
         </nav>
         <div>
           <Switch>
             <Route exact path='/' component={Home} /> 
-            <Route path='/about' component={About} />
-            <Route path='/video/:id' render={(props) => <Comment {...props}/>} />
+          
+
+          
+            <Route path='/product/:id' render={(props) => <Comment {...props}/>} />
           </Switch>
         </div>
 
@@ -43,7 +40,7 @@ export default class App extends Component {
 
 
 
-
+/*
 
 import axios from "axios";
 
@@ -82,3 +79,4 @@ function App() {
 }
 
 export default App;
+*/

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Display from './Display'
+import { apiURL } from "./util/apiURL.js";
+const API = apiURL();
 export default class Home extends Component {
     constructor(){
         super()
@@ -20,8 +22,8 @@ export default class Home extends Component {
     }
 
     getProduct = async (keyWord)  =>{
-        //apiKey is AIzaSyA2hz8e-TNG95kuho8zXFIOQGeOcs3VsL4
-        const productData = await axios.get(`https://powerful-everglades-92762.herokuapp.com/`)
+        //needs to be tested
+        const productData = await axios.get(`${API}/products`)
         console.log(productData.data.items)
         const productItems = productData.data.items
         if(productItems.length === 0) {
@@ -35,7 +37,7 @@ export default class Home extends Component {
             })
         }
         this.setState({
-            videos: productItems,
+            products: productItems,
         })
     }
 
