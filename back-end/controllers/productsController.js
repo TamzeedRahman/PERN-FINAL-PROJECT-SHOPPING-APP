@@ -74,7 +74,7 @@ products.post("/", validateProduct, async (req, res, next) => {
   try {
     const product = await createProduct(req.body);
     if (product["id"]) {
-      res.json(Product);
+      res.json(product);
     } else {
       const msg = `not added to database: ${JSON.stringify(req.body)}`;
       throw new ItemNotCreatedError(msg);
