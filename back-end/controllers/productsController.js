@@ -59,9 +59,9 @@ products.get("/:id", async (req, res) => {
   try {
     const product = await getProduct(id);
     if (product.id) {
-      res.json(Product);
+      res.json(product);
     } else {
-      console.log(`Database error: ${Product}`);
+      console.log(`Database error: ${product}`);
       throw `There is no Product with id: ${id}`;
     }
   } catch (e) {
