@@ -57,8 +57,8 @@ products.get("/", async (req, res) => {
 products.get("/:id", async (req, res) => {
   const { id } = req.params; 
   try {
-    const Product = await getProduct(id);
-    if (Product.id) {
+    const product = await getProduct(id);
+    if (product.id) {
       res.json(Product);
     } else {
       console.log(`Database error: ${Product}`);
@@ -72,8 +72,8 @@ products.get("/:id", async (req, res) => {
 // CREATE
 products.post("/", validateProduct, async (req, res, next) => {
   try {
-    const Product = await createProduct(req.body);
-    if (Product["id"]) {
+    const product = await createProduct(req.body);
+    if (product["id"]) {
       res.json(Product);
     } else {
       const msg = `not added to database: ${JSON.stringify(req.body)}`;
@@ -88,9 +88,9 @@ products.post("/", validateProduct, async (req, res, next) => {
 products.put("/:id", validateProduct, async (req, res, next) => {
   const { id } = req.params;
   try {
-    const Product = await updateProduct(id, req.body);
-    if (Product["id"]) {
-      res.json(Product);
+    const product = await updateProduct(id, req.body);
+    if (product["id"]) {
+      res.json(product);
     } else {
       const msg = `not added to database: ${JSON.stringify(req.body)}`;
       throw new ItemNotCreatedError(msg);
