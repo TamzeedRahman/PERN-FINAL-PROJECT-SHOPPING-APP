@@ -22,7 +22,7 @@ const getProduct = async (id) => {
   };
 
 // CREATE
-const createProduct = async (Product) => {
+const createProduct = async (product) => {
     try {
       if (!product.name) {
         throw 'You must specify a value for "name"';
@@ -33,6 +33,7 @@ const createProduct = async (Product) => {
       );
       return newProduct;
     } catch (error) {
+      console.log(error);
       return error;
     }
   };
@@ -47,11 +48,11 @@ const deleteProduct = async (id) => {
   };
   
   // UPDATE
-  const updateProduct = async (id, Products) => {
+  const updateProduct = async (id, product) => {
     try {
       return await db.one(
         "UPDATE Products SET name = $1, url = $2, price = $3, detail = $4 WHERE id=$5 RETURNING *;",
-        [product.name, product.url, product.price, products.detail, id]
+        [product.name, product.url, product.price, product.detail, id]
       );
     } catch (error) {
       return error;
