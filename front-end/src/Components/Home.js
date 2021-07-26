@@ -61,7 +61,7 @@ export default class Home extends Component {
                     <button>Submit</button>
                 </form>
                 <Display visibility={this.state.visibility} videos={this.state.products} searchFound={this.state.searchFound}/>
-            </div>
+            </div>  
         )
-    }
+    } 
 }
