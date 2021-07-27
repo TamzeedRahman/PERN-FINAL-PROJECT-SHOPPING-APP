@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-
+import {Link, BrowserRouter as Router} from 'react-router-dom'
 import './ProductList.css'
 
 
