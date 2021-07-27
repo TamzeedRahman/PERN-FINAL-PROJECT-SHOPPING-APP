@@ -1,8 +1,9 @@
 import './App.css';
-import {Switch, Link, Route, BrowserRouter as Router} from 'react-router-dom'
+import {Switch, Link, Route} from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './Components/Home'
 import Comment from './Components/Comment'
+import { Link, BrowserRouter as Router } from 'react-router-dom'
 export default class App extends Component {
   constructor(){
     super()
