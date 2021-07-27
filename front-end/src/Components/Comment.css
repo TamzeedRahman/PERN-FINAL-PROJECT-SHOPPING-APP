@@ -1,0 +1,17 @@
+.Comment {
+    text-align: center;
+
+  }
+  
+  .btn{
+    background-color: #377BFE;
+    color: white;
+    border-radius: 10%;
+    border:none;
+    width: 80px;
+    height: 40px;
+    font-size: large;
+  }
+  .section{
+    text-align: center;
+  }
