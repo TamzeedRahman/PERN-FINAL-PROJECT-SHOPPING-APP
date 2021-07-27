@@ -21,7 +21,7 @@ export default class Home extends Component {
         })
     }
 
-    getProduct = async (keyWord)  =>{
+    getProduct = async (ID)  =>{
         //needs to be tested
         const productData = await axios.get(`${API}/products/${ID}`)
         console.log(productData)
