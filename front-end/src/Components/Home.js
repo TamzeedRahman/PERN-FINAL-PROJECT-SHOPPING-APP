@@ -24,8 +24,8 @@ export default class Home extends Component {
     getProduct = async (keyWord)  =>{
         //needs to be tested
         const productData = await axios.get(`${API}/products/${ID}`)
-        console.log(productData.data.items)
-        const productItems = productData.data.items
+        console.log(productData)
+        const productItems = productData
         if(productItems.length === 0) {
             this.setState({
                 searchFound: true
