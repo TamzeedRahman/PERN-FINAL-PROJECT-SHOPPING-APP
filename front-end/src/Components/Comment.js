@@ -9,13 +9,7 @@ function Comment(props) {
     fontSize:"18px",
     borderRadius:"10px"
   }
-  const opts = {
-    height:'390',
-    width: '640',
-    playerVars : {
-      autoplay: 1,
-    },
-  }
+
 
   let [name, setName] = useState("")
   let [comment, setComment] = useState("")
