@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { v4 as uuid } from "uuid";
 import './ProductList.css'
 import { useState, useEffect } from "react";
-import { apiURL } from "./util/apiURL.js";
+
 
 
 /*function App() {
@@ -36,7 +36,7 @@ export default class ProductList extends Component {
                 {this.props.products.map((product, i) => {
                     return (
                       //pass backend id as prop
-                        <Link className='product' key={uuid()} to={`/product/${product.id.productId}`}>
+                        <Link className='product' key={`${product.id}`} to={`/products/${product.id}`}>
                             <img src={product.url}></img>
                             <h2>{product.name}</h2>
                         </Link>

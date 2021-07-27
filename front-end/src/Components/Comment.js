@@ -44,7 +44,7 @@ function Comment(props) {
     <div className='section'>
       <div className = 'item'>
         <img className = 'item-pic' src = "" alt="item"/>
-        <h2>product: {</h2>
+        <h2>product: {productID} </h2>
       </div>
 
 
