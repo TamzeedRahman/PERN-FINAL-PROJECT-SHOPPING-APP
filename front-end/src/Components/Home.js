@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Display from './Display'
-import { apiURL } from "./util/apiURL.js";
+import { apiURL } from "./apiURL.js";
 const API = apiURL();
 export default class Home extends Component {
     constructor(){
