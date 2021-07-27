@@ -37,7 +37,7 @@ export default class ProductList extends Component {
                     return (
                       //pass backend id as prop
                         <Link className='product' key={`${product.id}`} to={`/products/${product.id}`}>
-                            <img src={product.url}></img>
+                            <img src={product.url} alt="image"></img>
                             <h2>{product.name}</h2>
                         </Link>
 
