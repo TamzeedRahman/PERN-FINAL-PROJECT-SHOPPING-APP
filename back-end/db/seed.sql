@@ -11,4 +11,4 @@ VALUES
 ('AHA acid', 'https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/default/dw4d94900b/images/products/skin-perfecting-8-percent-aha-gel-1907-M.png?sw=360&sfrm=png', 200.00, 'burns you skin to the point that u only seen bone'),
 ('H20', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEg0DX6O0MPHEfHtKAV_aoJ_njbn1WDpROHQ&usqp=CAU', 100.00, 'cleans your face'),
 ('Pomegranate extract oil', 'https://images-na.ssl-images-amazon.com/images/I/41Tp82lx05L.jpg', 250.00, 'oily skin to look oilier in the sun'),
-('Papaya extract', 'https://cdn.shopify.com/s/files/1/2461/7623/articles/papaya-extract_900x.progressive.jpg?v=1515187964', 350.00, 'WHY DO YOU LIKE PAPAYA ITS A HORRIBLE FRUIT'),
+('Papaya extract', 'https://cdn.shopify.com/s/files/1/2461/7623/articles/papaya-extract_900x.progressive.jpg?v=1515187964', 350.00, 'WHY DO YOU LIKE PAPAYA ITS A HORRIBLE FRUIT');
