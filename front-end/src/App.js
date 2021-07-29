@@ -2,7 +2,6 @@ import './App.css';
 import {Switch, Link, Route} from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './Pages/Home'
-import Comment from './Components/Comment'
 import New from './Pages/New'
 import Show from './Pages/Show'
 export default class App extends Component {
@@ -23,7 +22,7 @@ export default class App extends Component {
           </Link>
           <h1 className="title">Welcome to a more beautiful you!</h1>
           <Link to='/products/new' className="add">
-            <button>Add to Inventory</button>
+            <button>Add to Cart</button>
           </Link>
         </nav>
         <div>
@@ -39,7 +38,6 @@ export default class App extends Component {
     )
   }
 }
-
 
 
 

@@ -1,48 +1,35 @@
 
 import React, { Component } from 'react'
+import { useState, useEffect } from "react";
 import {Link, BrowserRouter as Router} from 'react-router-dom'
 import './ProductList.css'
+import Product from './Product'
+import axios from "axios";
+import { apiURL } from "./apiURL.js";
+const API = apiURL();
 
-
-
-
-/*function App() {
-  const [products, setProducts] = useState([]);
+function ProductItems(props) {
+  const [productItems, setProductItems] = useState([]);
   useEffect(() => {
     axios
-      .get(`${API}/test`)
+      .get(`https://powerful-everglades-92762.herokuapp.com/products`)
       .then(
-        (response) => setProducts(response.data),
-        (error) => console.log("get", error)
-      )
-      .catch((c) => console.warn("catch", c));
-  }, []);
-  return (
-  <div>
-      <ul>
-        {products.map((products) => (
-          <li key={products.name}>{products.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-*/
-export default class ProductList extends Component {
-    render() {
-        return (
-            <div className='list'>
-                {this.props.products.map((product, i) => {
-                    return (
-                      //pass backend id as prop
-                        <Link className='product' key={`${product.id}`} to={`/products/${product.id}`}>
-                            <img src={product.url} alt="product"></img>
-                            <h2>{product.name}</h2>
-                        </Link>
+        (response) => {
+          console.log(response)
+          setProductItems(response.data);
+        });
+  }, []); 
 
-                    )
-                })}
-            </div>
-        )
-    }
+  return (            
+  <div className='Product'>
+      <section className='product'>
+        {productItems.map((productItem) => {
+          return(
+            <Product key={productItem.id} name={productItem.name} url={productItem.url} price={productItem.price} detail={productItem.detail}/>
+          )
+        })}
+      </section>
+    )
+  </div>)
 }
+export default ProductItems;

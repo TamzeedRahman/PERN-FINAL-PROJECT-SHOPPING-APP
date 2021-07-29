@@ -6,7 +6,7 @@
 }
 .title {
   margin-left: 100px;
-  font-size: 80px;
+  font-size: 70px;
   color: white;
   font-family: italic;
 
@@ -19,4 +19,7 @@
 }
 img {
   height: 100px;
+}
+.add {
+  margin-left: 10px;
 }

@@ -1,4 +1,4 @@
-.list {
+.product {
     margin-top: 40px;
     margin: 30px;
     display: grid;
@@ -6,4 +6,8 @@
 }
 h2 {
     font-size: 20px;
+}
+.item{
+    border: 1px solid black;
+    text-align: center;
 }
