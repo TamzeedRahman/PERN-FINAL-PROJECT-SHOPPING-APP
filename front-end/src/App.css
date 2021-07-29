@@ -1,23 +1,22 @@
 .Navbar{
-    background-color: #FB2201;
-    height: 80px;
-    display: flex;
-    align-items: center;
-  }
-  .title {
-    margin-left: 100px;
-    font-size: 80px;
-    color: white;
-    font-family: italic;
+  background-color: cyan;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.title {
+  margin-left: 100px;
+  font-size: 80px;
+  color: white;
+  font-family: italic;
 
-  }
-  .Navbar-Items{
-    text-decoration: none;
-    color: white;
-    margin-left: 20px;
-    font-size: xx-large;
-  }
-  img {
-    height: 100px;
-  }
-  
+}
+.Navbar-Items{
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-size: xx-large;
+}
+img {
+  height: 100px;
+}

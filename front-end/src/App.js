@@ -1,8 +1,10 @@
 import './App.css';
 import {Switch, Link, Route} from 'react-router-dom'
 import React, { Component } from 'react'
-import Home from './Components/Home'
+import Home from './Pages/Home'
 import Comment from './Components/Comment'
+import New from './Pages/New'
+import Show from './Pages/Show'
 export default class App extends Component {
   constructor(){
     super()
@@ -20,15 +22,16 @@ export default class App extends Component {
             <img src="https://i.imgur.com/pLt38gU.png" alt="Logo"/>
           </Link>
           <h1 className="title">Welcome to a more beautiful you!</h1>
+          <Link to='/products/new' className="add">
+            <button>Add to Inventory</button>
+          </Link>
         </nav>
         <div>
           <Switch>
             <Route exact path='/' component={Home} /> 
-            <Route exact path='/furniture' component={} /> 
-            <Route exact path='/' component={Home} /> 
-
-          
-            <Route path='/product/:id' render={(props) => <Comment {...props}/>} />
+            <Route exact path="/product/new" component={New}/>
+            <Route path='/product/:id' render={(props) => <Show {...props}/>} />
+            <Route exact path='/not-found' component={Error} />
           </Switch>
         </div>
 
