@@ -17,13 +17,15 @@ export default class App extends Component {
         <nav className="Navbar">
 
           <Link to='/' className="Navbar-Items">
-            <img src="https://imgur.com/pLt38gU" alt="Logo"/>
+            <img src="https://i.imgur.com/pLt38gU.png" alt="Logo"/>
           </Link>
+          <h1 className="title">Welcome to a more beautiful you!</h1>
         </nav>
         <div>
           <Switch>
             <Route exact path='/' component={Home} /> 
-          
+            <Route exact path='/furniture' component={} /> 
+            <Route exact path='/' component={Home} /> 
 
           
             <Route path='/product/:id' render={(props) => <Comment {...props}/>} />

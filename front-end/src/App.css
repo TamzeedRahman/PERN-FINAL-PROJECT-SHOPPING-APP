@@ -4,7 +4,13 @@
     display: flex;
     align-items: center;
   }
-  
+  .title {
+    margin-left: 100px;
+    font-size: 80px;
+    color: white;
+    font-family: italic;
+
+  }
   .Navbar-Items{
     text-decoration: none;
     color: white;
